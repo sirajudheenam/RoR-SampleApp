@@ -2,7 +2,7 @@
 
 <h1>Sharks</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= shark.name %></td>
         <td><%= shark.facts %></td>
-        <td><%= button_to 'Show', shark_path(:id => shark.id), :method => :get %></td>
-        <td><%= button_to 'Edit', edit_shark_path(:id => shark.id), :method => :get %></td>
-        <td><%= button_to 'Destroy', shark_path(:id => shark.id), :method => :delete %></td>
+        <td><%= button_to 'Show', shark_path(:id => shark.id), :method => :get , class: "btn btn-primary" %></td>
+        <td><%= button_to 'Edit', edit_shark_path(:id => shark.id), :method => :get , class: "btn btn-primary" %></td>
+        <td><%= button_to 'Destroy', shark_path(:id => shark.id), :method => :delete , class: "btn btn-warning" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Shark', new_shark_path %>
+<%= link_to 'New Shark', new_shark_path, class: "btn btn-secondary" %>

@@ -12,14 +12,20 @@
 
   <body>
     
+
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+    
+    <div class="container container-flex" >
+      <main role="main">
+      <%= content_for?(:content) ? yield(:content) : yield %>
+      </main>
+    </div>
 
-    <main role="main">
-    <%= content_for?(:content) ? yield(:content) : yield %>
-    </main>
-
-
+    <footer class="footer">
+      <%= render 'layouts/footer' %>
+    </footer>
+  
   </body>
 </html>
