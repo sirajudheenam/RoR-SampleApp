@@ -17,7 +17,7 @@ test:
 
 production:
   <<: *default
-  database: sampleapp_prod
+  database: ENV['DATABASE_URL'] #grab it from heroku dashboard, if you are deploying on heroku
 
 # default: &default
 #   adapter: sqlite3
