@@ -6,8 +6,7 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -34,6 +33,8 @@ gem 'uglifier', '~> 4.2.0'
 gem 'font-awesome-rails', '~> 4.7.0'
 
 group :development, :test do
+  # Use Puma as the app server
+  gem 'puma', '~> 5.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

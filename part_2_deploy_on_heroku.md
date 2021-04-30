@@ -35,5 +35,12 @@ $ git commit -am "make it better"
 $ git push -u origin main
 $ git push heroku main
 
+# Asset precompile issues while deploying on heroku:
+
+Try running locally :
+NODE_ENV=production RAILS_ENV=production rails assets:precompile --trace
+
+
+
 
 ```
