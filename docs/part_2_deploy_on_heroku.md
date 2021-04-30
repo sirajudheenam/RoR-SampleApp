@@ -119,6 +119,19 @@ heroku repo:reset -a yourapp
 git push heroku-yourapp master
 
 
+# Heroku - babel warnings:
+
+you can silence this warning by explicitly adding
+remote:        	["@babel/plugin-proposal-private-methods", { "loose": true }]
+remote:        to the "plugins" section of your Babel config
+
+Edit this file `babel.config.js`
+
+Go to plugins section and add this:
+
+`["@babel/plugin-proposal-private-methods", { "loose": true }]`
+
+
 ```
 # If you have already initialized git on the app directory 
 # If app is created via dashboard

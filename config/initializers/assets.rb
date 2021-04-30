@@ -12,3 +12,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# Added by Sam on 01 May 2021
+# Rails.application.config.assets.precompile += [/^[-_a-zA-Z0-9]*\..*/]
+# Rails.application.config.assets.precompile += [proc { |filename, path| path =~ /(app|lib|vendor)\/assets/ && ['.js', '.css'].include?(File.extname(filename)) }]
