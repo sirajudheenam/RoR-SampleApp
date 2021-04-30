@@ -21,10 +21,13 @@ heroku --version
 heroku git:remote -a sam-rubyonrails
 
 
+
+
+bundle lock --add-platform x86_64-linux
+
 $ git add .
 $ git commit -am "make it better"
-$ git push heroku master
-
+$ git push heroku main
 
 
 ```
