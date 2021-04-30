@@ -84,6 +84,14 @@ web.1: up 2021/05/01 00:02:40 +0530 (~ 4m ago)
 
 heroku logs -t
 
+## Login to heroku bash
+heroku run bash
+
+du -hd 1 tmp/cache/assets/
+386M  tmp/cache/assets/sprockets
+~ $ du -hd 1 tmp/cache/assets/ --apparent-size
+27M tmp/cache/assets/sprockets
+
 
 
 

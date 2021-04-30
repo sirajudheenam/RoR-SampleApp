@@ -64,6 +64,9 @@ end
 
 group :production do
   gem 'pg'
+  
+  # By default Rails 4 will not serve your assets. To enable this functionality you need to go into config/application.rb and add this line -> config.serve_static_assets = true
+  gem 'rails_12factor' #, group: :production
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
