@@ -13,7 +13,7 @@ git push -u origin main
 ```
 Install the [heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
-```
+```bash
 # Using homebrew on Mac
 brew tap heroku/brew && brew install heroku
 heroku autocomplete --refresh-cache
@@ -23,6 +23,10 @@ printf "$(heroku autocomplete:script bash)" >> ~/.bashrc; source ~/.bashrc
 
 # Verify the installation
 heroku --version
+
+# heroku free instance
+heroku create --stack cedar
+
 
 # You need to create an account with heroku and logged in with your credentials 
 
@@ -37,8 +41,22 @@ $ git push heroku main
 
 # Asset precompile issues while deploying on heroku:
 
-Try running locally :
+# Try running locally :
 NODE_ENV=production RAILS_ENV=production rails assets:precompile --trace
+
+# heroku can't run sqlite so we need to add production on `config/database.yml`.
+
+RAILS_ENV=production rake db:create
+
+
+git push heroku main
+
+heroku run rake db:create
+
+heroku run rake db:create:all
+
+
+
 
 
 
