@@ -110,7 +110,7 @@ Run git push heroku main to create a new release using this buildpack.
 
 ## Other steps can be explored:
 
-heroku buildpacks:set heroku/ruby --index 2 -a yourapp
+heroku buildpacks:set heroku/ruby --index 2 -a sam-rubyonrail
 
 heroku plugins:install heroku-repo
 heroku buildpacks:clear -a yourapp
