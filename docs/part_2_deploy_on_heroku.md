@@ -93,6 +93,9 @@ du -hd 1 tmp/cache/assets/
 27M tmp/cache/assets/sprockets
 
 
+## Run webpacker on heroku
+
+heroku run rake webpacker:install
 
 
 # Troubleshooting:

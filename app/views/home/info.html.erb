@@ -1,0 +1,13 @@
+<h1>Information about the app </h1>
+
+<p> Asset Config Path:
+	<ul>
+		<% @asset_config_path.each do |path| %>
+		<li><%= path %></li>
+		<% end %>
+	</ul>
+</p>
+
+Rails.application.config.assets.paths << Rails.root.join("lib", "videoplayer", "flash")
+
+<span > <%= Rails.root.join("app/javascript", "stylesheets", "application") %></span>
