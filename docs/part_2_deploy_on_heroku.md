@@ -98,7 +98,26 @@ du -hd 1 tmp/cache/assets/
 heroku run rake webpacker:install
 
 
+
 # Troubleshooting:
+
+## Asset pipeline is not working - bootstrap did not display styles on the App
+
+
+heroku buildpacks:set heroku/nodejs -a sam-rubyonrails
+Buildpack set. Next release on sam-rubyonrails will use heroku/nodejs.
+Run git push heroku main to create a new release using this buildpack.
+
+## Other steps can be explored:
+
+heroku buildpacks:set heroku/ruby --index 2 -a yourapp
+
+heroku plugins:install heroku-repo
+heroku buildpacks:clear -a yourapp
+heroku buildpacks -a yourapp
+heroku repo:reset -a yourapp
+git push heroku-yourapp master
+
 
 ```
 # If you have already initialized git on the app directory 
