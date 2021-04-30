@@ -47,6 +47,43 @@ heroku open
 
 ```
 
+## Precompile your assets locally for production before deploying to production
+
+RAILS_ENV=production bundle exec rake assets:precompile
+
+
+
+## Use Profile for your app
+
+```
+cat <<'EOF' >>Procfile
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
+EOF
+```
+Run using `heroku local` 
+
+# Other heroku commands
+
+## Find out how many free dyno hours remaining for your app
+
+heroku ps -a <app name>
+
+heroku ps -a sam-rubyonrails
+
+```
+Free dyno hours quota remaining this month: 550h 0m (100%)
+Free dyno usage for this app: 0h 0m (0%)
+For more information on dyno sleeping and how to upgrade, see:
+https://devcenter.heroku.com/articles/dyno-sleeping
+
+=== web (Free): bin/rails server -p ${PORT:-5000} -e $RAILS_ENV (1)
+web.1: up 2021/05/01 00:02:40 +0530 (~ 4m ago)
+```
+
+## Look at the logs
+
+heroku logs -t
+
 
 
 
