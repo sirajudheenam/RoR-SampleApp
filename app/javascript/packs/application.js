@@ -3,8 +3,6 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-
-
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
@@ -23,16 +21,6 @@ import "controllers"
 // Javascript import
 import "./validate_email"
 // Javascript import
-
-//CoffeeScript import
-import "coffee"
-
-// import "coffeescript/register"
-// WARNING in ./node_modules/coffeescript/lib/coffee-script/register.js 15:6-24
-// require.extensions is not supported by webpack. Use a loader instead.
-// require('coffee')
-
-
 
 
 Rails.start()

@@ -1,57 +1,54 @@
 # Part 5 - CoffeeScript with Rails 6
 
-Webpacker requires these npm packages to process CoffeeScript files.
+```
+rails webpacker:install:coffee
 
-Add this snippet to your `package.json`file
-
-```json
-	"coffee-loader": "0.9.0",
-	"coffeescript": "1.12.7",
-
-# Add alias
-	  "_moduleAliases": {
-        "coffee-script": "node_modules/coffeescript/lib/coffeescript"
-    }
 ```
 
-# https://webpack.js.org/loaders/coffee-loader/
+Make sure you have package.json like this: pay attention to `coffee-loader` version.
 
-## Doesn't work
-cat <<'EOF' >> webpack.config.js
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.coffee$/,
-        loader: 'coffee-loader',
-        options: {
-          transpile: {
-            presets: ['@babel/env'],
-          },
-        },
-      },
-    ],
+```json
+{
+  "name": "sample-app",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "5.3.0",
+    "bootstrap": "^4.6.0",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "1.12.7",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
+    "stimulus": "^2.0.0",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
-};
-EOF
-
-
-## Loader
-cat <<'EOF' >> webpack.config.js
-module.exports = {
-  debug: true,
-  entry: './app/javascript/coffee',
-  loaders: [
-    //{ test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
-    //{ test: /\.css$/, loader: 'style!css' },
-    { test: /\.coffee$/, loader: 'coffee' }
-  ],
-  resolve: {
-    // you can now require('file') instead of require('file.coffee')
-    extensions: ['', '.js', '.json', '.coffee']
-  },
-  output: {
-    filename: 'bundle.js'
+  "version": "0.1.0",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
-EOF
+```
+
+# Verify if this is working :
+
+Insert this line to your `application.html.erb` page in the <head> section
+
+```
+<%= javascript_pack_tag 'hello_coffee' %>
+```
+Once application is loaded, verify a message on the browser console.
+
+`Hello world from coffeescript`
+
+# Troubleshooting :
+
+rm -rf node_modules package-lock.json yarn.lock
+npm install --legacy-peer-deps
+
+
