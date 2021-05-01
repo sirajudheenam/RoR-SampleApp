@@ -32,6 +32,7 @@ gem 'coffee-rails', '~> 5.0.0'
 gem 'uglifier', '~> 4.2.0'
 gem 'font-awesome-rails', '~> 4.7.0'
 
+
 group :development, :test do
   # Use Puma as the app server
   gem 'puma', '~> 5.0'

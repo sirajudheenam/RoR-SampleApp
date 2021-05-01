@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home/info'
   get 'home/contact'
   get 'home/about'
+  get 'home/validation'
   resources :sharks do
     resources :posts
   end

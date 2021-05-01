@@ -10,5 +10,31 @@
                 </li>
             </ul>
         </div>
-    </div>
+
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <%= link_to 'Home', root_path, class: 'btn btn-primary' %>
+          <%= link_to 'Info', home_info_path, class: 'btn btn-secondary' %>
+          <%= link_to 'About Us', home_about_path, class: 'btn btn-warning' %>
+          <%= link_to 'Careers', home_info_path, class: 'btn btn-primary' %>
+          <%= link_to 'Contact Us', home_contact_path, class: 'btn btn-warning' %>
+          <%= link_to 'Validation', home_validation_path, class: 'btn btn-secondary' %>
+
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <%= link_to 'Home', root_path, class: 'dropdown-item' %>
+              <%= link_to 'Info:', home_info_path, class: 'dropdown-item' %>
+              <%= link_to 'About Us', home_about_path, class: 'dropdown-item' %>
+              <%= link_to 'Careers', home_info_path, class: 'dropdown-item' %>
+              <%= link_to 'Validation', home_validation_path, class: 'dropdown-item' %>
+              <%= link_to 'Contact Us', home_contact_path, class: 'dropdown-item' %>
+
+            </div>
+          </div>
+        </div>
+
+    </div><!-- container div -->
 </nav>
+

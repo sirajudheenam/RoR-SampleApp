@@ -12,4 +12,7 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def validation
+  end
 end

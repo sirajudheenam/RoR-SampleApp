@@ -14,10 +14,10 @@
 #   # $('.can-be-hidden').text = value
 #   # if value == "HIDE"
 #   #   $('.can-be-hidden').addClass('hide')
-# $ ->
+$ ->
 
 #   # $(document).on 'change', configset_name, change_configset_name
-#   console.log "Document is loaded you see..."
+  console.log "Document is loaded you see..."
 
 #   $(document).on 'click', configset_name, ->
 #     $( ".can-be-hidden" ).css("color", "red").text("")

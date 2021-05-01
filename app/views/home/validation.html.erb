@@ -1,0 +1,33 @@
+<h1> This form Validates up to 50 email addresses for AWS SES</h1>
+  <div class="container-fluid"> <b>Normal Form</b>
+    <div class="form-example-div">
+      <form>
+        <span id="ErrBlock" class="email-error-block">Error appears here..</span>
+        <div class="form-group">
+          <label for="toeMail">To address</label>
+          <input type="button" class="btn btn-warning btn-sm" id="toBtnPopulate" value="Populate/Clear" />
+          <input type="email" class="form-control email-addr" id="toeMail" placeholder="Email"> 
+          <span id="toEmailHelpBlock" class="email-help-block">user@domain.com format.</span>
+          <span id="toErrBlock" class="email-error-block">to error block</span>
+        </div>
+        <div class="form-group">
+          <label for="cceMail">Cc address</label>
+          <input type="button" class="btn btn-warning btn-sm" id="ccBtnPopulate" value="Populate/Clear" />
+          <input type="email" class="form-control email-addr" id="cceMail" placeholder="Email">
+          <span id="ccEmailHelpBlock" class="email-help-block">user@domain.com format.</span>
+          <span id="ccErrBlock" class="email-error-block">cc error block</span>
+        </div>
+
+        <div class="form-group">
+          <label for="bcceMail">Bcc address</label>
+          <input type="button" class="btn btn-warning btn-sm" id="bccBtnPopulate" value="Populate/Clear" />
+          <input type="email" class="form-control email-addr" id="bcceMail" placeholder="Email">
+          <span id="bccEmailHelpBlock" class="email-help-block">user@domain.com format.</span>
+          <span id="bccErrBlock" class="email-error-block">bcc error block</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <br />
+    <hr />
