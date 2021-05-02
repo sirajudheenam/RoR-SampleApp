@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @shark.name
+%p
+  %strong Facts:
+  = @shark.facts
+%h2 Posts
+= render 'sharks/posts'
+= link_to 'Edit', edit_shark_path(@shark)
+|
+= link_to 'Back', sharks_path
+%div{"data-controller" => "posts"}
+  %button{"data-action" => "posts#showAll"} Show Older Posts
+  %div{"data-target" => "posts.show", style: "visibility:hidden"}
+    = render 'sharks/all'

@@ -1,0 +1,26 @@
+%h1 This form Validates up to 50 email addresses for AWS SES
+.container-fluid
+  %b Normal Form
+  .form-example-div
+    %form
+      .form-group
+        %label{:for => "toeMail"} To address
+        %input#toBtnPopulate.btn.btn-warning.btn-sm{:type => "button", :value => "Populate/Clear"}/
+        %input#toeMail.form-control.email-addr{:placeholder => "Email", :type => "email"}/
+        %span#toEmailHelpBlock.email-help-block user@domain.com format.
+        %span#toErrBlock.email-error-block to error block
+      .form-group
+        %label{:for => "cceMail"} Cc address
+        %input#ccBtnPopulate.btn.btn-warning.btn-sm{:type => "button", :value => "Populate/Clear"}/
+        %input#cceMail.form-control.email-addr{:placeholder => "Email", :type => "email"}/
+        %span#ccEmailHelpBlock.email-help-block user@domain.com format.
+        %span#ccErrBlock.email-error-block cc error block
+      .form-group
+        %label{:for => "bcceMail"} Bcc address
+        %input#bccBtnPopulate.btn.btn-warning.btn-sm{:type => "button", :value => "Populate/Clear"}/
+        %input#bcceMail.form-control.email-addr{:placeholder => "Email", :type => "email"}/
+        %span#bccEmailHelpBlock.email-help-block user@domain.com format.
+        %span#bccErrBlock.email-error-block bcc error block
+      %button.btn.btn-primary{:type => "submit"} Submit
+  %br/
+  %hr/

@@ -1,0 +1,17 @@
+= form_with(model: shark) do |form|
+  - if shark.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(shark.errors.count, "error")
+        prohibited this shark from being saved:
+      %ul
+        - shark.errors.each do |error|
+          %li= error.full_message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :facts
+    = form.text_area :facts
+  .actions
+    = form.submit

@@ -1,7 +1,4 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
+
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -9,6 +6,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 // Added for bootstrap support --START SCSS
+// other scss files and partials are included in those two file application.scss, main.scss
 import "bootstrap"
 import "../stylesheets/application"
 import "../stylesheets/main"
@@ -18,11 +16,17 @@ import "../stylesheets/main"
 import "controllers"
 // command (bundle exec rails webpacker:install:stimulus)
 
-// Javascript import
+// custom Javascript import
 import "./validate_email"
-// Javascript import
-
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+console.log('This is generated from Webpacker for React')
+// Support component names relative to this directory:
+//Added by rails generate react:install
+var ReactRailsUJS = require("react_ujs");
+var componentRequireContext = require.context("components", true);
+ReactRailsUJS.useContext(componentRequireContext);

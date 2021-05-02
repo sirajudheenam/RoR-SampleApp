@@ -3,82 +3,27 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
+
 //COLORS
+
+/*
+
 $color-primary: #f9ed69; //yellow color
 $color-secondary: #f08a5d; //orange
 $color-tertiary: #b83b5e; //pink
 $color-text-dark: #333; //grey
 $color-text-light: #eee;
 
-$white: white;
-$black: black;
-$green: green;
-
-
-.header {
-   height: 5vh;
-  
-  &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
-  
-
-  &__logo {
-    height: 3.5rem;
-  }
-
-  &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-}
-
-//footer -- change -copied from header
-.footer {
-  height: 5vh;
-  background-size: cover;
-  background-position: top;
-  position: relative;
-
-  li {
-        list-style: none;
-        display: inline-block;
-        float: left;
-        margin-right: 5px;
-        text-transform: uppercase;
-
-
-        a{
-
-        }
-  }
-}
 
 
 
-.navbar {
-        margin-bottom: 0;
-        background: $black;
-}
-body {
-        background: $green; //$black;
-        color: $black;
-        font-family: 'Merriweather', sans-serif;
-}
+
 h1,
 h2 {
         font-weight: bold;
-        /* position: relative; */
 }
-p {
-        font-size: 16px;
-        color: $green;
-}
+
+
 a:visited {
         color: $black;
 }
@@ -88,32 +33,36 @@ a:visited {
         text-align: center;
         p {
                 color: $black;
-                font-size: 20px;
+                font-size: 2rem;
         }
 }
 .link {
         color: $black;
 }
-/*
-.btn-primary {
-        color: $black;
-        border-color: $black;
-        margin-bottom: 5px;
-}
-.btn-sm {
-        background-color: $black;
-        display: inline-block;
-}
-*/
-img,
-video,
-audio {
-        margin-top: 20px;
-        max-width: 80%;
-}
+
 caption {
 
         float: left;
         clear: both;
 
 }
+
+
+.btn-primary {
+        color: $black;
+        border-color: $black;
+        margin-bottom: .5rem;
+}
+.btn-sm {
+        background-color: $black;
+        display: inline-block;
+}
+
+img,
+video,
+audio {
+        margin-top: 2rem;
+        max-width: 80%;
+}
+
+*/

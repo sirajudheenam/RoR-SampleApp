@@ -18,5 +18,17 @@ module SampleApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # rails to use haml for scaffold generators.
+    config.generators do |g|
+      g.template_engine :haml
+
+      # you can also specify a different test framework or ORM here
+      # g.test_framework  :rspec
+      # g.orm             :mongoid
+    end 
+
   end
+
+
 end
