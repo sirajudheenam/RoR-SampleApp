@@ -1,13 +1,14 @@
+/*
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; /*this inherits from body*/ }
+  box-sizing: inherit;  } // this inherits from body
 
 html {
-  /* This is what 1 rem is */
-  //font-size: 62.5%; /*10 px; 10/16=0.625 == 62.5% */
+  // This is what 1 rem is 
+  //font-size: 62.5%; //10 px; 10/16=0.625 == 62.5% 
   font-size: 80%;}
 
 body {
@@ -16,3 +17,4 @@ body {
 p {
 	font-size: 1.6rem;
 	color: $black; }
+*/

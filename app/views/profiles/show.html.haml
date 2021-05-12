@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @profile.user_id
+%p
+  %b Gender:
+  = @profile.gender
+%p
+  %b Age:
+  = @profile.age
+%p
+  %b Date of birth:
+  = @profile.date_of_birth
+%p
+  %b City:
+  = @profile.city
+%p
+  %b Country:
+  = @profile.country
+%p
+  %b Subscribe:
+  = @profile.subscribe
+
+= link_to 'Edit', edit_profile_path(@profile)
+\|
+= link_to 'Back', profiles_path

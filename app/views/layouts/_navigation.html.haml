@@ -1,0 +1,30 @@
+%header.header
+  %nav.navbar.navbar-dark.navbar-static-top.navbar-expand-md
+    .container
+      %button.navbar-toggler.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+      = link_to "SampleApp", root_path, class: 'navbar-brand'
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.mr-auto
+          %li.nav-item= link_to 'Sharks', sharks_path, class: 'nav-link'
+      .btn-group{"aria-label" => "Button group with nested dropdown", :role => "group"}
+        = link_to 'Home', root_path, class: 'btn btn-primary'
+        = link_to 'Users', users_path, class: 'btn btn-warning'
+        = link_to 'Microposts', microposts_path, class: 'btn btn-primary'
+        = link_to 'Profiles', profiles_path, class: 'btn btn-warning'
+        = link_to 'Info', home_info_path, class: 'btn btn-secondary'
+        = link_to 'About Us', home_about_path, class: 'btn btn-warning'
+        = link_to 'Careers', home_info_path, class: 'btn btn-primary'
+        = link_to 'Contact Us', home_contact_path, class: 'btn btn-warning'
+        = link_to 'Validation', home_validation_path, class: 'btn btn-secondary'
+        .btn-group{:role => "group"}
+          %button#btnGroupDrop1.btn.btn-warning.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+            Menu
+          .dropdown-menu{"aria-labelledby" => "btnGroupDrop1"}
+            = link_to 'Home', root_path, class: 'dropdown-item'
+            = link_to 'Info:', home_info_path, class: 'dropdown-item'
+            = link_to 'About Us', home_about_path, class: 'dropdown-item'
+            = link_to 'Careers', home_info_path, class: 'dropdown-item'
+            = link_to 'Validation', home_validation_path, class: 'dropdown-item'
+            = link_to 'Contact Us', home_contact_path, class: 'dropdown-item'
+    / container div

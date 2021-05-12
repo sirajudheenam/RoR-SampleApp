@@ -1,12 +1,12 @@
 -# frozen_string_literal: true
-= simple_form_for(@user) do |f|
+= simple_form_for @user, class: 'form-horizontal' do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-
+  / https://github.com/heartcombo/simple_form
   .form-inputs
     = f.input :name
     = f.input :email
     = f.input :login
-
+    = f.input :password, html_input: {type: "password"}
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: 'btn btn-primary'
