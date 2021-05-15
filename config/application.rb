@@ -19,6 +19,10 @@ module SampleApp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    
+    # Include the authenticity token in remote forms.
+    config.action_view.embed_authenticity_token_in_remote_forms = true
+
     # rails to use haml for scaffold generators.
     config.generators do |g|
       g.template_engine :haml

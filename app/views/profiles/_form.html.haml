@@ -4,15 +4,11 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   .form-inputs
     = f.input :user_id
-    / = f.input 
     = f.input :gender
-    = f.input :age, disabled: true
+    = f.input :age
     = f.input :date_of_birth
     = f.input :city
-    / = f.input :country
     = f.country_select :country, priority_countries: ["GB", "FR", "DE", "IN", "US", "CA", "Israel"]
-    / = f.input :subscribe
-    / collections
     = f.label :subscribe
     = f.collection_radio_buttons :subscribe, [[true, 'Yes'], [false, 'No']], :first, :last   
   .form-actions

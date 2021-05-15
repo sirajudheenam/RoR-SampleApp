@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  facts: MyText
+  name: BlackShark
+  facts: This kind of shark is found deep sea
 
 two:
-  name: MyString
-  facts: MyText
+  name: WhiteShark
+  facts: This is lovely shark you can ever find and it is loved by kids

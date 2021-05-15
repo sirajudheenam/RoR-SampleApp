@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  body: MyText
-  shark: one
+  body: This is about Black Sharks
+  shark: BlackShark
 
 two:
-  body: MyText
-  shark: two
+  body: This is about White Sharks
+  shark: WhiteShark

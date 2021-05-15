@@ -1,14 +1,14 @@
 require "test_helper"
 
 class ProfilesControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @profile = profiles(:one)
-  end
+  # setup do
+  #   @profile = profiles(:one)
+  # end
 
-  test "should get index" do
-    get profiles_url
-    assert_response :success
-  end
+  # test "should get index" do
+  #   get profiles_url
+  #   assert_response :success
+  # end
 
   # test "should get new" do
   #   get new_profile_url

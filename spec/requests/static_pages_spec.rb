@@ -1,28 +1,7 @@
-require 'rails_helper'
+# require 'rails_helper'
 require 'capybara/rails'
 
 RSpec.describe "StaticPages", type: :request do
-
-  # describe "GET /home" do
-  #   it "returns http success" do
-  #     get "/static_pages/home"
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-
-  # describe "GET /help" do
-  #   it "returns http success" do
-  #     get "/static_pages/help"
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-
-  # describe "GET /about" do
-  #   it "returns http success" do
-  #     get "/static_pages/about"
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
 
   describe "About Page" do 
     before {visit about_path}
@@ -52,4 +31,26 @@ RSpec.describe "StaticPages", type: :request do
     click_link "sample app"
     page.should have_selector 'h1', text: 'Sample App'
   end
+  
+  # describe "GET /home" do
+  #   it "returns http success" do
+  #     get "/static_pages/home"
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
+
+  # describe "GET /help" do
+  #   it "returns http success" do
+  #     get "/static_pages/help"
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
+
+  # describe "GET /about" do
+  #   it "returns http success" do
+  #     get "/static_pages/about"
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
+
 end

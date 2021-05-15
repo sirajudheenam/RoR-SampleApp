@@ -14,7 +14,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'coffee-rails', '~> 5.0.0'
 gem 'uglifier', '~> 4.2.0'
 gem 'font-awesome-rails', '~> 4.7.0'
-gem 'haml', '~> 5.2.1'
 gem 'simple_form', '~> 5.1.0'
 gem 'react-rails', '~> 2.6.1'
 gem 'rack-cors', '~> 1.1.1'
@@ -25,7 +24,8 @@ gem 'will_paginate',              '~> 3.3.0'
 gem 'bootstrap-will_paginate',    '~> 1.0.0'
 gem 'active_storage_validations', '~> 0.9.3' # 0.8.9
 gem 'bcrypt',                     '~> 3.1.16' # 3.1.13
-
+gem 'haml', '~> 5.2.1'
+gem 'haml-rails', '~> 2.0'
 gem 'country_select', require: 'country_select_without_sort_alphabetical'
 
 group :development, :test do
@@ -45,7 +45,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
-  gem 'haml-rails', '~> 2.0'
+  
 end
 
 group :test do
@@ -55,7 +55,7 @@ group :test do
   gem "minitest-reporters"
   gem "mini_backtrace"
   gem "guard-minitest"
-
+  gem "rails-controller-testing"
 end
 
 group :production do

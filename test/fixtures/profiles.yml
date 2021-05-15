@@ -1,19 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 
-  gender: 
-  age: 
-  date_of_birth: 
-  city: 
-  country: 
+  user_id: 1
+  gender: Male
+  age: 38
+  date_of_birth: 10.06.1981
+  city: Berlin
+  country: Germany
   subscribe: false
 
 two:
-  user_id: 
-  gender: 
-  age: 
-  date_of_birth: 
-  city: 
-  country: 
-  subscribe: false
+  user_id: 2
+  gender: Female
+  age: 30
+  date_of_birth: 13.11.1990
+  city: Berlin
+  country: Germany
+  subscribe: true

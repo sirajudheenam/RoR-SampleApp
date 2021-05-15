@@ -39,6 +39,10 @@ postgres=# \password sampleapp
 Enter new password:
 Enter it again:
 
+psql sampleapp_test
+GRANT ALL PRIVILEGES ON DATABASE sampleapp_test TO sampleapp;
+ALTER USER sampleapp WITH SUPERUSER;
+
 # quit 
 postgres=# \q 
 

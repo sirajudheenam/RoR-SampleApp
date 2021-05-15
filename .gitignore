@@ -42,3 +42,4 @@ yarn-debug.log*
 .DS_Store
 
 bundler_stubs/
+/spring/*.pid
