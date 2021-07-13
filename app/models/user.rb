@@ -1,11 +1,4 @@
 class User < ApplicationRecord
-  # attr_accessible :email, :name
-  
-	has_many :microposts, dependent: :destroy # Deletes all microposts created by this user if User is deleted
-  has_one :profile, dependent: :destroy
-end
-
-class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
@@ -25,7 +18,9 @@ class User < ApplicationRecord
                     uniqueness: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
-
+  # Deletes all microposts created by this user if User is deleted
+  has_one :profile, dependent: :destroy
+  
   # has_one_attached :avatar
   
   # Returns the hash digest of the given string.

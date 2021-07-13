@@ -1,0 +1,60 @@
+/*
+
+//COLORS
+$color-primary: #f9ed69; //yellow color
+$color-secondary: #f08a5d; //orange
+$color-tertiary: #b83b5e; //pink
+$color-text-dark: #333; //grey
+$color-text-light: #eee;
+
+
+
+
+
+h1,
+h2 {
+        font-weight: bold;
+}
+
+
+a:visited {
+        color: $black;
+}
+.jumbotron {
+        background: #0048CD;
+        color: $black;
+        text-align: center;
+        p {
+                color: $black;
+                font-size: 2rem;
+        }
+}
+.link {
+        color: $black;
+}
+
+caption {
+
+        float: left;
+        clear: both;
+
+}
+
+
+.btn-primary {
+        color: $black;
+        border-color: $black;
+        margin-bottom: .5rem;
+}
+.btn-sm {
+        background-color: $black;
+        display: inline-block;
+}
+
+img,
+video,
+audio {
+        margin-top: 2rem;
+        max-width: 80%;
+}
+*//*# sourceMappingURL=sharks.css.map */

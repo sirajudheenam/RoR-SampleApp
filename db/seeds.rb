@@ -19,3 +19,19 @@
 # 	filename: 'man01.png',
 # 	content_type: 'application/png'
 # 	)
+
+instruments = [
+    {"title":"Piano","token":"piano","count":13},
+    {"title":"Bass Guitar","token":"bass","count":12},
+    {"title":"Viola","token":"viola","count":12},
+    {"title":"Synth","token":"synth","count":11},
+    {"title":"Keyboard","token":"keyboard","count":9},
+    {"title":"Saxophone","token":"saxophone","count":8},
+    {"title":"Flute","token":"flute","count":8},
+    {"title":"Drums","token":"drums","count":6},
+    {"title":"Guitar","token":"guitar","count":5},
+    {"title":"Violin","token":"violin","count":5},
+    {"title":"Vocals","token":"vocals","count":4},
+    {"title":"Cello","token":"cello","count":4}
+  ]
+Instrument.create(instruments)

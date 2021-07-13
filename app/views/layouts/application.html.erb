@@ -2,6 +2,9 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
+    <!-- Google Ad Sense -->
+    <script data-ad-client="ca-pub-4166241856779437" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +15,7 @@
     <%= javascript_pack_tag 'hello_coffee' %>
 
     <%= render 'layouts/shim' %>
+
   </head>
 
   <body>

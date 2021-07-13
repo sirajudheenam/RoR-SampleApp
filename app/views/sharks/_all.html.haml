@@ -2,5 +2,5 @@
   %ul
     %li.post
       = post.body
-      = button_tag "Remove Post", data: { controller: "posts", action: "posts#remove" }
-      = button_tag "Upvote Post", data: { controller: "posts", action: "posts#upvote" }
+      = button_tag "Remove Post", class: 'btn btn-warning', data: { controller: "posts", action: "posts#remove" }
+      = button_tag "Upvote Post", class: 'btn btn-warning', data: { controller: "posts", action: "posts#upvote" }

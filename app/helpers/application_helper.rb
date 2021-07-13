@@ -16,4 +16,13 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  # Instruments column sorting
+  def sortable(column, title=nil)
+    title ||= column.titleize
+    direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
+    logger.tagged("INSTRUMENT:") { logger.info "direction #{direction}" }
+    logger.tagged("INSTRUMENT:") { logger.info "sort: #{title}" }
+    link_to title, sort: column, direction: direction
+  end
 end

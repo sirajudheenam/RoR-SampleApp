@@ -10,7 +10,8 @@
 = link_to 'Edit', edit_shark_path(@shark), class: 'btn btn-primary'
 |
 = link_to 'Back', sharks_path, class: 'btn btn-primary'
+%br
 %div{"data-controller" => "posts"}
-  %button{"data-action" => "posts#showAll"} Show Older Posts, class: 'btn btn-primary'
+  %button{"data-action" => "posts#showAll" , class: 'btn btn-primary'} Show Older Posts
   %div{"data-target" => "posts.show", style: "visibility:hidden"}
     = render 'sharks/all'
