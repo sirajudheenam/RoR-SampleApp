@@ -11,8 +11,8 @@
     "jquery": "^3.6.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react_ujs": "^2.6.1",
     "react-dom": "^17.0.2",
+    "react_ujs": "^2.6.1",
     "stimulus": "^2.0.0",
     "turbolinks": "^5.2.0",
     "yarn": "^1.22.10"
