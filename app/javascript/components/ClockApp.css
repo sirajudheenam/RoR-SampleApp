@@ -1,0 +1,10 @@
+.clock {
+  background-color: yellow;
+  border: 2px solid #FFF;
+  align-content: center;
+  border-radius: 10px;
+}
+.aligned-center{
+  align-items: center;
+  /* align-content: center; */
+}

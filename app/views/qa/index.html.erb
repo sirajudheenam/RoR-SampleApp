@@ -1,0 +1,35 @@
+<%= render 'navbar' %>
+<div class="well">
+	<h4>The Universe is totality of everything that exists, has existed, or will exist </h4>
+	<p>This Q&amp;A site is dedicated to questions about the history of the Universe</p>
+</div>
+
+
+<div class="container">
+	<div class="boxes">
+		<%= @questions.each do |q| %>
+		<div class="media">
+			<div class="media-left">
+				<a href="#">
+					<img class="media-object" src="<%= q.gravatar %>">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading"> <%= q.email %> asked:</h4>
+				<div class="time hidden-xs"> <%= time_ago_in_words q.created_at %> ago</div>
+				<%= truncate q.body, length: 300 %>
+				<div class="hidden-xs">
+					<a href="<%= question_path(q) %>" class="btn btn-success btn-xs">View Answers </a>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+
+<% if @questions.empty? %>
+<div class="alert alert-info">Nothing here yet, be the first to ask?</div>
+<% end %>
+
+<%= render 'new_question_form' %>

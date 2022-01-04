@@ -1,0 +1,2 @@
+class TaxCalc < ApplicationRecord
+end

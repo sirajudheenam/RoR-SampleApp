@@ -27,6 +27,9 @@ gem 'bcrypt',                     '~> 3.1.16' # 3.1.13
 gem 'haml', '~> 5.2.1'
 gem 'haml-rails', '~> 2.0'
 gem 'country_select', require: 'country_select_without_sort_alphabetical'
+gem 'responders'
+gem 'kaminari', "~> 1.2.1"
+gem 'prettyprint'
 
 group :development, :test do
   gem 'puma', '~> 5.3.0'
@@ -36,7 +39,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.7.3'
   gem 'guard-spork', '~> 2.1.0'
   gem 'rb-fsevent'
-  gem 'growl' 
+  gem 'growl'
 end
 
 group :development do
@@ -45,7 +48,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
-  
+
 end
 
 group :test do
@@ -64,9 +67,3 @@ group :production do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
-
-
-
-

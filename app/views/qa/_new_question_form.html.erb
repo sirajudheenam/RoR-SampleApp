@@ -1,0 +1,33 @@
+<div class="modal fade" id="new-question-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <%= form_for(Question.new) do |q| %>
+
+
+      <div class="modal-header">
+        <h4 class="modal-title"><b>New Question</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+
+      <div class="modal-body">
+
+    			<div class="form-group col-md-6">
+    				<label for="inputEmail" class="col-sm-2 control-label">Email:</label>
+    				<input name="question[email]" type="email" value="<%= current_user_email %>" class="form-control" id="inputEmail" placeholder="Email" required>
+    			</div>
+
+    			<div class="form-group col-md-6">
+    				<label for="inputQuestion" class="col-sm-2 control-label" >Question:</label>
+    				<textarea name="question[body]" class ="form-control" id="inputQuestion" placeholder="What would you like to know" required></textarea>
+    			</div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="submit">Create</button>
+        <button class="btn btn-alert" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

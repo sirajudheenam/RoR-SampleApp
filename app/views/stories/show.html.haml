@@ -1,0 +1,26 @@
+%p#notice= notice
+%h1 Stories
+.jumbotron.text-center.bg-white
+  %h1 Blog Post Application using Ruby-On-Rails !!
+  %p.lead Guide you step by step learning Ruby on Rails through building a Blog application.
+  %br/
+  %a.btn.btn-primary.btn-lg{:href => "#", :role => "button", :target => "_blank"} Learn more
+%table.table.table-hover
+  %thead
+    %tr
+      %th Title
+      %th Content
+      %th Action
+  %tbody
+    - @paginatable_array.each do |story|
+      %tr
+        %td
+          = story[:title]
+        %td
+          = story[:content]
+        %td
+          = link_to "Show", story_path(id: @id, title: story[:title]), class: "btn btn-primary"
+%br/
+= paginate @paginatable_array, theme: 'bootstrap4'
+Params Page:
+= params[:page]

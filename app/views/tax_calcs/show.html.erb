@@ -1,0 +1,119 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Current month:</strong>
+  <%= @tax_calc.current_month %>
+</p>
+
+<p>
+  <strong>Current year:</strong>
+  <%= @tax_calc.current_year %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @tax_calc.salary %>
+</p>
+
+<p>
+  <strong>Other income:</strong>
+  <%= @tax_calc.other_income %>
+</p>
+
+<p>
+  <strong>Gross:</strong>
+  <%= @tax_calc.gross %>
+</p>
+
+<p>
+  <strong>Base tax:</strong>
+  <%= @tax_calc.base_tax %>
+</p>
+
+<p>
+  <strong>Other tax:</strong>
+  <%= @tax_calc.other_tax %>
+</p>
+
+<p>
+  <strong>Lumpsum tax:</strong>
+  <%= @tax_calc.lumpsum_tax %>
+</p>
+
+<p>
+  <strong>Lumpsum reuni tax:</strong>
+  <%= @tax_calc.lumpsum_reuni_tax %>
+</p>
+
+<p>
+  <strong>Other reuni tax:</strong>
+  <%= @tax_calc.other_reuni_tax %>
+</p>
+
+<p>
+  <strong>Pension insurance:</strong>
+  <%= @tax_calc.pension_insurance %>
+</p>
+
+<p>
+  <strong>Unemployment insurance:</strong>
+  <%= @tax_calc.unemployment_insurance %>
+</p>
+
+<p>
+  <strong>Net pay:</strong>
+  <%= @tax_calc.net_pay %>
+</p>
+
+<p>
+  <strong>Own company contribution:</strong>
+  <%= @tax_calc.own_company_contribution %>
+</p>
+
+<p>
+  <strong>Own company match:</strong>
+  <%= @tax_calc.own_company_match %>
+</p>
+
+<p>
+  <strong>Er allowance hi:</strong>
+  <%= @tax_calc.er_allowance_hi %>
+</p>
+
+<p>
+  <strong>Er allowance ci:</strong>
+  <%= @tax_calc.er_allowance_ci %>
+</p>
+
+<p>
+  <strong>Addl contrib er allowance:</strong>
+  <%= @tax_calc.addl_contrib_er_allowance %>
+</p>
+
+<p>
+  <strong>Payoff contrib volun hi:</strong>
+  <%= @tax_calc.payoff_contrib_volun_hi %>
+</p>
+
+<p>
+  <strong>Ded contrib volun ci:</strong>
+  <%= @tax_calc.ded_contrib_volun_ci %>
+</p>
+
+<p>
+  <strong>Add contrib paid by co hi:</strong>
+  <%= @tax_calc.add_contrib_paid_by_co_hi %>
+</p>
+
+<p>
+  <strong>Bank transfer:</strong>
+  <%= @tax_calc.bank_transfer %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tax_calc.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_tax_calc_path(@tax_calc) %> |
+<%= link_to 'Back', tax_calcs_path %>

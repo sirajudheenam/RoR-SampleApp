@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Calcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Current month</th>
+      <th>Current year</th>
+      <th>Salary</th>
+      <th>Other income</th>
+      <th>Gross</th>
+      <th>Base tax</th>
+      <th>Other tax</th>
+      <th>Lumpsum tax</th>
+      <th>Lumpsum reuni tax</th>
+      <th>Other reuni tax</th>
+      <th>Pension insurance</th>
+      <th>Unemployment insurance</th>
+      <th>Net pay</th>
+      <th>Own company contribution</th>
+      <th>Own company match</th>
+      <th>Er allowance hi</th>
+      <th>Er allowance ci</th>
+      <th>Addl contrib er allowance</th>
+      <th>Payoff contrib volun hi</th>
+      <th>Ded contrib volun ci</th>
+      <th>Add contrib paid by co hi</th>
+      <th>Bank transfer</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_calcs.each do |tax_calc| %>
+      <tr>
+        <td><%= tax_calc.current_month %></td>
+        <td><%= tax_calc.current_year %></td>
+        <td><%= tax_calc.salary %></td>
+        <td><%= tax_calc.other_income %></td>
+        <td><%= tax_calc.gross %></td>
+        <td><%= tax_calc.base_tax %></td>
+        <td><%= tax_calc.other_tax %></td>
+        <td><%= tax_calc.lumpsum_tax %></td>
+        <td><%= tax_calc.lumpsum_reuni_tax %></td>
+        <td><%= tax_calc.other_reuni_tax %></td>
+        <td><%= tax_calc.pension_insurance %></td>
+        <td><%= tax_calc.unemployment_insurance %></td>
+        <td><%= tax_calc.net_pay %></td>
+        <td><%= tax_calc.own_company_contribution %></td>
+        <td><%= tax_calc.own_company_match %></td>
+        <td><%= tax_calc.er_allowance_hi %></td>
+        <td><%= tax_calc.er_allowance_ci %></td>
+        <td><%= tax_calc.addl_contrib_er_allowance %></td>
+        <td><%= tax_calc.payoff_contrib_volun_hi %></td>
+        <td><%= tax_calc.ded_contrib_volun_ci %></td>
+        <td><%= tax_calc.add_contrib_paid_by_co_hi %></td>
+        <td><%= tax_calc.bank_transfer %></td>
+        <td><%= tax_calc.user_id %></td>
+        <td><%= link_to 'Show', tax_calc %></td>
+        <td><%= link_to 'Edit', edit_tax_calc_path(tax_calc) %></td>
+        <td><%= link_to 'Destroy', tax_calc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Calc', new_tax_calc_path %>

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :instruments
   get '/info', to: 'instruments#info'
 
+  get '/static_pages/home'
   root   'static_pages#home'
+
   get    '/help',    to: 'static_pages#help'
   get    '/about',   to: 'static_pages#about'
   get    '/contact', to: 'static_pages#contact'
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 
@@ -28,7 +31,7 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  post '/login', to: 'users#show'
+  # post '/login', to: 'users#show'
   post 'rails/active_storage/direct_uploads', to: 'direct_uploads#create'
 #  root 'static_pages#home'
 
@@ -45,24 +48,46 @@ Rails.application.routes.draw do
         resources :comments
       end
     end
-  end   
+  end
 
+
+  namespace :api do
+  	namespace :v1 do
+  		resources :items, only: [:index, :create, :destroy, :update]
+  	end
+  end
+
+  get '/react', to: 'react#index'
+  get '/react/clock', to: 'react#clock'
+
+  # Pagination demo with pre-filled stories
+  concern :paginatable do
+    get '(page/:page)', action: :index, on: :collection, as: ''
+  end
+
+  resources :stories, concerns: :paginatable
+
+
+  resources :answers
+  resources :questions
+  get 'qa/index'
+  get 'qa/main'
 
   # Use this instead.
   # map.resources :publishers do |publishers|
   #   publishers.resources :magazines, :name_prefix => "publisher_"
   # end
-  
+
   # map.resources :magazines do |magazines|
   #   magazines.resources :articles, :name_prefix => "magazine_"
   # end
-  
+
   # map.resources :articles do |articles|
   #   articles.resources :comments, :name_prefix => "article_"
   # end
-  
+
   # map.resources :comments
-  
+
   # The above will produce this
   # publishers_url              #-> /publishers
   # publisher_url(1)            #-> /publishers/1

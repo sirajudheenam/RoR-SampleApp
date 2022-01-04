@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 2021_07_13_204518) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "answers", force: :cascade do |t|
+    t.integer "question_id"
+    t.string "email"
+    t.text "body"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -70,6 +78,13 @@ ActiveRecord::Schema.define(version: 2021_07_13_204518) do
     t.string "title"
     t.string "token"
     t.integer "count"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -117,6 +132,13 @@ ActiveRecord::Schema.define(version: 2021_07_13_204518) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "email"
+    t.text "body"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "relationships", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
@@ -130,6 +152,34 @@ ActiveRecord::Schema.define(version: 2021_07_13_204518) do
   create_table "sharks", force: :cascade do |t|
     t.string "name"
     t.text "facts"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tax_calcs", force: :cascade do |t|
+    t.string "current_month"
+    t.string "current_year"
+    t.float "salary"
+    t.float "other_income"
+    t.float "gross"
+    t.float "base_tax"
+    t.float "other_tax"
+    t.float "lumpsum_tax"
+    t.float "lumpsum_reuni_tax"
+    t.float "other_reuni_tax"
+    t.float "pension_insurance"
+    t.float "unemployment_insurance"
+    t.float "net_pay"
+    t.float "own_company_contribution"
+    t.float "own_company_match"
+    t.float "er_allowance_hi"
+    t.float "er_allowance_ci"
+    t.float "addl_contrib_er_allowance"
+    t.float "payoff_contrib_volun_hi"
+    t.float "ded_contrib_volun_ci"
+    t.float "add_contrib_paid_by_co_hi"
+    t.float "bank_transfer"
+    t.float "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -154,4 +204,6 @@ ActiveRecord::Schema.define(version: 2021_07_13_204518) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "microposts", "users"
   add_foreign_key "posts", "sharks"
+
+  
 end

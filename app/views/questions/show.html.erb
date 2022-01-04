@@ -1,0 +1,42 @@
+	<div class="container">
+	<div class="lead well">
+		<div class="media">
+			<div class="media-left">
+				<a href="#">
+					<img class="media-object" src="<%= @question.gravatar %>">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading"><%= @question.email %> asked:</h4>
+				<%= @question.body %>
+			</div>
+
+		</div>
+	</div>
+
+	<div>
+		<button type="button" class="btn btn-success bt-sm" data-toggle="modal" data-target="#new-answer-modal">Submit new answer</button>
+	</div>
+
+	<% render 'qa/new_answer_form' %>
+
+	<% @answers.each do |answer| %> <!-- # @question.answers.each do |answer|-->
+		<div class="media">
+			<div class="media-left">
+				<a href="#">
+					<img class="media-object" src="<%= answer.gravatar %>">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading"><%= answer.email %> answered:</h4>
+				<div> <%= time_ago_in_words answer.created_at %> ago</div>
+				<%= answer.body %>
+			</div>
+		</div>
+	<% end %>
+
+<%= render 'qa/new_answer_form' %>
+
+<% if @answers.empty? %>
+	<div class="alert alert-info">No answer yet, Wanna be the first to answer?</div>
+<% end %>

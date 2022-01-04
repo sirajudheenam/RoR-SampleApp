@@ -9,6 +9,7 @@ const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(
 
 
 $(document).ready(function() {
+  console.log("Document is ready from validate_email.js");
   // Test fake email data population to the input fields
   populateClearFakeEmails('#toBtnPopulate', '#toeMail', toFakeAddresses);
   populateClearFakeEmails('#ccBtnPopulate', '#cceMail', ccFakeAddresses);
@@ -19,7 +20,7 @@ $(document).ready(function() {
   emailValidate("#cceMail", "#ccEmailHelpBlock", "#ccErrBlock");
   emailValidate("#bcceMail", "#bccEmailHelpBlock", "#bccErrBlock");
 
-  
+
   // document.getElementsByClassName("email-addr")[0];
   // $(".email-addr").forEach( (item, index ) => {
   //   emailValidate(".email-addr", "#toEmailHelpBlock", "#toErrBlock");
@@ -29,7 +30,7 @@ $(document).ready(function() {
 });
 
 function populateClearFakeEmails(btnElement, inputElement, strAddr) {
-  $(btnElement).click(function() { 
+  $(btnElement).click(function() {
     tmp = $(inputElement).val();
     if (!tmp || tmp.length === 0  ) {
       $(inputElement).val(strAddr);
@@ -72,7 +73,7 @@ function emailValidate(inputElement, helperBlock, errorBlock) {
 function processBulkEmail(inputText) {
   var invalidEntries = [];
   var valideMailArr = [];
-  emailList = inputText.split(re); 
+  emailList = inputText.split(re);
   console.log("Unprocessed - Count is : " + emailList.length);
   emailList.forEach( ( element, index ) => {
     var emElement = element.trimEnd().trimStart();

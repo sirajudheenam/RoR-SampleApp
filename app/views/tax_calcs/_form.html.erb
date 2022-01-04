@@ -1,0 +1,35 @@
+
+<%= simple_form_for(@tax_calc) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :current_month %>
+    <%= f.input :current_year %>
+    <%= f.input :salary %>
+    <%= f.input :other_income %>
+    <%= f.input :gross %>
+    <%= f.input :base_tax %>
+    <%= f.input :other_tax %>
+    <%= f.input :lumpsum_tax %>
+    <%= f.input :lumpsum_reuni_tax %>
+    <%= f.input :other_reuni_tax %>
+    <%= f.input :pension_insurance %>
+    <%= f.input :unemployment_insurance %>
+    <%= f.input :net_pay %>
+    <%= f.input :own_company_contribution %>
+    <%= f.input :own_company_match %>
+    <%= f.input :er_allowance_hi %>
+    <%= f.input :er_allowance_ci %>
+    <%= f.input :addl_contrib_er_allowance %>
+    <%= f.input :payoff_contrib_volun_hi %>
+    <%= f.input :ded_contrib_volun_ci %>
+    <%= f.input :add_contrib_paid_by_co_hi %>
+    <%= f.input :bank_transfer %>
+    <%= f.input :user_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

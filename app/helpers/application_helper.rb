@@ -25,4 +25,9 @@ module ApplicationHelper
     logger.tagged("INSTRUMENT:") { logger.info "sort: #{title}" }
     link_to title, sort: column, direction: direction
   end
+
+
+  def current_user_email
+    session[:current_user_email] || 'No email is saved.'
+  end
 end

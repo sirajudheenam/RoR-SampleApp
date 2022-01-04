@@ -95,8 +95,11 @@ class InstrumentsController < ApplicationController
 
     # Sorting methods
     def sort_column
-      logger.debug "Instrument.column_names.include?(params[:sort]): #{Instrument.column_names.include?(params[:sort])}"
-      Instrument.column_names.include?(params[:sort].downcase) ? params[:sort] : "ID"
+      if params[:sort] && Instrument.column_names.include?(params[:sort].downcase)
+        return params[:sort]
+      else
+        return "id"
+      end
     end
 
     def sort_direction

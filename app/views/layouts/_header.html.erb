@@ -1,41 +1,83 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header>
   <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <ul class="nav navbar-nav navbar-right collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Sample App</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="dropdown">
+            <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
             </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Log out", logout_path, method: :delete %>
-              </li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><%= link_to "Home", root_path, class: "dropdown-item" %></li>
+              <li><%= link_to "About", about_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Contact", contact_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Validation", validation_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Help", help_path, class: "dropdown-item" %></li>
+              <li><hr class="dropdown-divider"></li>
+              <% if logged_in? %>
+                <li class="nav-item"><%= link_to "Users", users_path, class: "dropdown-item"  %></li>
+                <li class="nav-item"><%= link_to "Profile", current_user , class: "dropdown-item" %></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="nav-item"><%= link_to "Settings", edit_user_path(current_user) , class: "dropdown-item" %></li>
+                <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete , class: "dropdown-item" %></li>
+              <% else %>
+                <li><%= link_to "Log in", login_path , class: "dropdown-item" %></li>
+              <% end %>
             </ul>
-          </li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-        <% end %>
-      </ul>
-    </nav>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <% if logged_in? %>
+              Profile
+              <% else %>
+              LogIn
+              <% end %>
+            </button>
+            <ul class="dropdown-menu">
+              <% if logged_in? %>
+                <li class="nav-item"><%= link_to "Users", users_path, class: "dropdown-item"  %></li>
+                <li class="nav-item"><%= link_to "Profile", current_user , class: "dropdown-item" %></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="nav-item"><%= link_to "Settings", edit_user_path(current_user) , class: "dropdown-item" %></li>
+                <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete , class: "dropdown-item" %></li>
+              <% else %>
+                <li><%= link_to "Log in", login_path , class: "dropdown-item" %></li>
+              <% end %>
+            </ul>
+          </div>
+
+
+          <div class="dropdown">
+            <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              React Components
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><%= link_to "Clock", "/react/clock", class: "dropdown-item" %></li>
+              <li><%= link_to "Items (API)", "/react", class: "dropdown-item" %></li>
+              <li><%= link_to "Contact", contact_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Validation", validation_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Help", help_path, class: "dropdown-item" %></li>
+              <li><hr class="dropdown-divider"></li>
+              <% if logged_in? %>
+                <li class="nav-item"><%= link_to "Users", users_path, class: "dropdown-item"  %></li>
+                <li class="nav-item"><%= link_to "Profile", current_user , class: "dropdown-item" %></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="nav-item"><%= link_to "Settings", edit_user_path(current_user) , class: "dropdown-item" %></li>
+                <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete , class: "dropdown-item" %></li>
+              <% else %>
+                <li><%= link_to "Log in", login_path , class: "dropdown-item" %></li>
+              <% end %>
+            </ul>
+          </div>
+
+
+          </div>
+        </div>
+     </nav>
   </div>
+
+
+
 </header>
